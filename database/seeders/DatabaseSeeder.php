@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\EventModel;
+use App\Models\Event;
 use App\Models\User;
-use Illuminate\Console\Scheduling\Event;
+
 use Illuminate\Database\Seeder;
 
 
@@ -26,8 +26,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
             
-        EventModel::factory()->create([
-            'name'=>'','description'=>'','images'=>'','spaces'=>'','location'=>'','date'=>'',
+        Event::factory()->create([
+            'name' => 'Nirvana', 'description' => '“Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstance',
+            'image' => 'https://i.etsystatic.com/22453392/r/il/4e3db8/3178301500/il_570xN.3178301500_b8lb.jpg',
+            'spaces' => '30', 'location' => 'Gent/Belgica',
+            'date' => '2022-10-01'
         ]);
         
 

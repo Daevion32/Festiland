@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\EventModel;
+use App\Models\Event;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,8 +16,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        $eventsPast = EventModel::whereDate('date', '<=', now())->Paginate(4);
-        $eventsFut = EventModel::whereDate('date', '>=', now())->Paginate(4);
+        $eventsPast = Event::whereDate('date', '<=', now())->Paginate(4);
+        $eventsFut = Event::whereDate('date', '>=', now())->Paginate(4);
         return view('home', compact('eventsPast', 'eventsFut'));
     }
 
@@ -49,7 +49,7 @@ class EventController extends Controller
             'location' => $request -> location, 
             'date' => $request -> date,
         ]) */
-        EventModel::create($event);
+        Event::create($event);
         return redirect()->route('home');
     }
 
@@ -61,7 +61,7 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $event = EventModel::find($id); 
+        $event = Event::find($id); 
         return view('showEvent', compact('event'));
     }
 
@@ -73,7 +73,7 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $event = EventModel::find($id); 
+        $event = Event::find($id); 
         return view('editEvent', compact('event'));
     }
 
@@ -87,7 +87,7 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         $event = request()->except(['_token', '_method']);
-        EventModel::where('id', '=', $id)->update($event);
+        Event::where('id', '=', $id)->update($event);
         return redirect()->route('home');
     }
 
@@ -99,7 +99,7 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        EventModel::destroy($id);
+        Event::destroy($id);
         return redirect()->route('home');
     }
 
@@ -107,7 +107,7 @@ class EventController extends Controller
     {
 
         $user = User::find(Auth::id());
-        $event = EventModel::find($id);
+        $event = Event::find($id);
         $user->event()->attach($event);
         return redirect()->route('home');
     }
@@ -116,7 +116,7 @@ class EventController extends Controller
     {
 
         $user = User::find(Auth::id());
-        $event = EventModel::find($id);
+        $event = Event::find($id);
         $user->event()->detach($event);
         return redirect()->route('home');
     }

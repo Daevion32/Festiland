@@ -43,6 +43,6 @@ class User extends Authenticatable
     ];
 
     public function event(){
-        return $this->belongsToMany(EventModel::class);
+        return $this->belongsToMany(Event::class);
     }
 }
