@@ -32,6 +32,12 @@ class DatabaseSeeder extends Seeder
             'spaces' => '30', 'location' => 'Gent/Belgica',
             'date' => '2022-10-01'
         ]);
+        Event::factory()->create([
+            'name' => 'OTRO PARA PROBAR', 'description' => '“Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstance',
+            'image' => 'https://i.etsystatic.com/22453392/r/il/4e3db8/3178301500/il_570xN.3178301500_b8lb.jpg',
+            'spaces' => '30', 'location' => 'Gent/Belgica',
+            'date' => '2022-10-01'
+        ]);
         
 
         User::factory()->create(['name'=>'admin','email'=>'admin@festiland.com','isAdmin'=>true]);

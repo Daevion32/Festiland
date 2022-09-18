@@ -28,10 +28,20 @@ h2 {
     text-align: center;
 }
 
+.carousel-control-prev, .carousel-control-next{
+    background-color: #001326;
+}
 
 
 section {
     padding-top: 10vh;
+}
+
+#cardSection{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    padding-top: 5vh;
 }
 .card {
     background-color: #001326;
@@ -49,10 +59,34 @@ section {
     justify-content: space-between;
 }
 
+.adminButtons{
+    background-color: white;
+    border-radius: 10vh;
+    width: 4vw;
+    height: 3.5vh;
+    justify-content: space-around;
+}
+
 .firstRow {
     justify-content: space-between;
 }
 
+.date {
+    display: flex;
+}
+.date p {
+    margin-left: 0.5vw;
+}
+.location{
+    display:flex;
+}
+.location p {
+    margin-left: 0.5vw;
+}
+.fifthRow {
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 
