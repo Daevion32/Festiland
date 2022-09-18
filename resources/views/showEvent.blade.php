@@ -9,12 +9,12 @@
         <div class="card border-dark card_textshow">
             <p class="card-text">{{ $event->date}}</p>
 
-             <div class="container_spaces">
-             <h5 class="card-title">Description</h5>
-             <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_space" type="submit"> {{ $event-> spaces}} pax</button>
+            <div class="container_spaces">
+            <h5 class="card-title">Description</h5>
+            <button class="h-10 px-6 font-semibold rounded-md bg-red text-white button_space" type="submit"> {{ $event-> spaces}} pax</button>
 
-             </div>
-         
+            </div>
+        
 
 
             <p class="card-text">{{ $event->description}}</p>
@@ -29,7 +29,7 @@
             <a href="{{ url('/') }}" class="btn btn-warning btn_home">Home</a>
     </div>
         </div>
-       
+    
 </div>
 
 

@@ -7,3 +7,52 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+
+.navbar {
+    background-color: #001326;
+}
+.menu-icon {
+    width: 100%;;
+}
+.navbar-toggler, .collapsed {
+color:white;
+}
+
+.sliderTitle {
+    background-color: #15616D;
+    color: white;   
+    padding: 2vh;
+    margin-top: 0;
+}
+h2 {
+    text-align: center;
+}
+
+
+
+section {
+    padding-top: 10vh;
+}
+.card {
+    background-color: #001326;
+    color: white;
+}
+
+
+.firstRow, .fourthRow, .fifthRow {
+    display: flex;
+    align-items: center;
+}
+.adminButtons, .attendanceButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstRow {
+    justify-content: space-between;
+}
+
+
+
+
